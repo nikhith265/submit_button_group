@@ -33,26 +33,23 @@ A flutter plugin to show button with inbuilt loading.
 
 Add the latest submit_button_group as a dependency in your pubspec.yaml file.
 
+Create a custom Widget to display a group of two buttons with an in-build loading action. In default Widget shows two buttons, the primary button and the secondary button.  The primary button shows the nature of a submit button and the secondary button shows the nature of a close button. Both are customizable and perform as needed.
+
 ## Usage
-
-  Create a custom [Widget] to display a group of two buttons with in-build loading action.
-  in default [Widget] shows two buttons, primary button and secondary button.
-  Primary button accepts the nature of a submit button and
-  secondary button accepts the nature of a close button, both are customizable and performs as need.
-
-### Group of buttons
+### Adding group of buttons
+Display both buttons.
 
 ```dart
  SubmitButtonsGroup groupButton =  SubmitButtonsGroup(  
             loading: _loading,
             onSubmit: () async {
               _loading.value = true;
-              TODO:add your code
+               await _incrementCounter();
               _loading.value = false;
             },
           );
 ```
-### Single button
+### Adding a single button
 
 Show only a single button.
 
@@ -72,6 +69,6 @@ SubmitButtonsGroup button =  SubmitButtonsGroup(
 
 I am always open for suggestions and ideas for possible improvements or fixes.
 
-Feel free to open a [Pull Request]('https://github.com/nikhith265/submit_button_group/pulls') if you would like to contribute to the project.
+Feel free to open a <a href ="https://github.com/nikhith265/submit_button_group/pulls"> <Strong>Pull Request</Strong></a> if you would like to contribute to the project.
 
 If you would like to have a new feature implemented, just write a new issue.

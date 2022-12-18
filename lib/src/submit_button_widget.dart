@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:submit_button_group/submit_button_group.dart';
 
 class SubmitButtonsGroup extends StatefulWidget with ButtonConstants {
-  ///Define a custom [Widget] to display a group of two buttons with in-build loading action.
-  ///in default [Widget] shows two buttons, primary button and secondary button.
-  ///
-  ///Primary button accepts the nature of a submit button and
-  ///secondary button accepts the nature of a close button, both are customizable and performs as need.
+ ///Create a custom [Widget] to display a group of two buttons with an in-build loading action. 
+ ///In default Widget shows two buttons, the primary button and the secondary button. 
+ /// The primary button shows the nature of a submit button and the secondary button shows the nature of a close button.
+ ///  Both are customizable and perform as needed.
 
   ///[loading] accepts a [ValueNotifier] with value [bool], which determines
   /// wether to display a [loaderWidget] or buttons.
