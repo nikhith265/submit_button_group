@@ -1,3 +1,4 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+* -initial release.
+  -Create customized buttons with in-built loading.
