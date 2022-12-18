@@ -15,7 +15,11 @@ A flutter plugin to show button with inbuilt loading.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+<img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/screen_shots/Screenshot_1671328831.png" alt="Button type one" width="300" height="540">
+<img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/screen_shots/Screenshot_1671330586.png" alt="Button type two" width="300" height="540">
+<img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/screen_shots/Screenshot_1671330607.png" alt="Button type three" width="300" height="540">
+<img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/gif/sample_gif.mp4" alt="Show loading" width="300" height="540">
+
 
 ## Getting started
 
