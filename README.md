@@ -32,7 +32,8 @@ https://user-images.githubusercontent.com/83773556/208682763-0e4304f3-a87a-4772-
   </td>
  </tr>
  <tr>
-   <td><img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/screen_shots/Screenshot_1671330586.png" alt="Button type two" width="300" height="540"></td>
+   <td> ![Group 535](https://user-images.githubusercontent.com/83773556/208685040-2b6fe73e-818d-48b7-b201-b8ede544380b.png)
+ </td>
  </tr>
 </table>
 
