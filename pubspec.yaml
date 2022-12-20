@@ -1,7 +1,7 @@
 name: submit_button_group
 description: A new Flutter package project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/nikhith265/submit_button_group
 
 environment:
   sdk: ">=2.16.0 <3.0.0"
