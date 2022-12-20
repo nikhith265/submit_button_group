@@ -32,9 +32,9 @@ https://user-images.githubusercontent.com/83773556/208682763-0e4304f3-a87a-4772-
   </td>
  </tr>
  <tr>
-   <td> 
-   <img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/screen_shots/Group%20535.png" alt="Button type three" width="300" height="240">
- </td>
+  
+   <td><img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/screen_shots/Group%20535.png" alt="Button type three" width="300" height="150"></td>
+ 
  </tr>
 </table>
 
