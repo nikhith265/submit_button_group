@@ -31,6 +31,9 @@ https://user-images.githubusercontent.com/83773556/208682763-0e4304f3-a87a-4772-
   
   </td>
  </tr>
+ <tr>
+   <td><img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/screen_shots/Screenshot_1671330586.png" alt="Button type two" width="300" height="540"></td>
+ </tr>
 </table>
 
 <h3>Handling the loading of buttons is an extra task for developers. Don't worry, now it's simple. Swipe down. </h3>
