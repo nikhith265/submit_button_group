@@ -22,23 +22,16 @@ A flutter plugin to show button with inbuilt loading.
 
 <table>
  <tr>
-  <td><img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/screen_shots/Screenshot_1671328831.png" alt="Button type one" width="300" height="540"></td>
-  <td><img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/screen_shots/Screenshot_1671330586.png" alt="Button type two" width="300" height="540"></td>
+  <td><img src="https://raw.githubusercontent.com/nikhith265/submit_button_group/master/attachments/screen_shots/Screenshot_1671328831.png" alt="Button type one" width="300" height="540"></td>
+  <td><img src="https://raw.githubusercontent.com/nikhith265/submit_button_group/master/attachments/screen_shots/Screenshot_1671330586.png" alt="Button type two" width="300" height="540"></td>
  </tr>
  <tr>
-  <td><img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/screen_shots/Screenshot_1671330607.png" alt="Button type three" width="300" height="540"></td>
-  <td>
-  
-
-https://user-images.githubusercontent.com/83773556/208682763-0e4304f3-a87a-4772-97a8-27fbb607994d.mp4
-
-
-  
-  </td>
+  <td><img src="https://raw.githubusercontent.com/nikhith265/submit_button_group/master/attachments/screen_shots/Screenshot_1671330607.png" alt="Button type three" width="300" height="540"></td>
+<td>https://github.com/nikhith265/submit_button_group/blob/81380667815e289ef73fdf11b61eea888a0319a0/attachments/gif/sample_gif.mp4</td>
  </tr>
  <tr>
   
-   <td><img src="https://github.com/nikhith265/submit_button_group/blob/master/attachments/screen_shots/Group%20535.png" alt="Button type three" width="300" height="150"></td>
+   <td><img src="https://raw.githubusercontent.com/nikhith265/submit_button_group/master/attachments/screen_shots/Group%20535.png" alt="Button type three" width="300" height="150"></td>
  
  </tr>
 </table>
