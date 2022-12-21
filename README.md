@@ -27,7 +27,7 @@ A flutter plugin to show button with inbuilt loading.
  </tr>
  <tr>
   <td><img src="https://raw.githubusercontent.com/nikhith265/submit_button_group/master/attachments/screen_shots/Screenshot_1671330607.png" alt="Button type three" width="300" height="540"></td>
-<td>https://github.com/nikhith265/submit_button_group/blob/81380667815e289ef73fdf11b61eea888a0319a0/attachments/gif/sample_gif.mp4</td>
+<td>![Loading sample](https://github.com/flutter/plugins/blob/main/packages/video_player/video_player/doc/demo_ipod.gif?raw=true)</td>
  </tr>
  <tr>
   
