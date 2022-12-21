@@ -1,5 +1,5 @@
 name: submit_button_group
-description: A new Flutter package project.
+description: A flutter plugin to show button with inbuilt loading.
 version: 0.0.1
 homepage: https://github.com/nikhith265/submit_button_group
 
