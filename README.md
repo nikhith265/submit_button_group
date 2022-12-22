@@ -37,7 +37,6 @@ A flutter plugin to show button with inbuilt loading.
  
  </tr>
 </table>
-<!-- ![Loading sample](https://github.com/nikhith265/submit_button_group/blob/298c26b5a3fcfe936f16deef0e8712c2fdc1b635/attachments/gif/sample_gif.gif?raw=true) -->
 
 <h3>Handling the loading of buttons is an extra task for developers. Don't worry, now it's simple. Swipe down. </h3>
 
