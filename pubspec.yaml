@@ -1,6 +1,6 @@
 name: submit_button_group
 description: A flutter plugin to show button with inbuilt loading.Create a custom Widget to display a group of two buttons with an in-build loading action. In default Widget shows two buttons, the primary button and the secondary button.  The primary button shows the nature of a submit button and the secondary button shows the nature of a close button. Both are customizable and perform as needed.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/nikhith265/submit_button_group
 
 environment:
