@@ -69,6 +69,21 @@ class SubmitButtonsGroup extends StatefulWidget with ButtonConstants {
   ///on [Null] shows default [CircularProgressIndicator].
   final Widget? loaderWidget;
 
+  ///[primeButtonIcon] add a icon to the primary button.
+  final Widget? primeButtonIcon;
+
+  ///[secondaryButtonIcon] add a icon to the secondary button.
+  final Widget? secondaryButtonIcon;
+
+  ///[buttonShape] add a shape to the buttons.
+  final OutlinedBorder? buttonShape;
+
+  ///[primeButtonGradient] add a gradient to the primary button.
+  final Gradient? primeButtonGradient;
+
+  ///[secondaryButtonGradient] add a gradient to the secondary button.
+  final Gradient? secondaryButtonGradient;
+
   const SubmitButtonsGroup(
       {Key? key,
       this.loading,
@@ -86,7 +101,12 @@ class SubmitButtonsGroup extends StatefulWidget with ButtonConstants {
       this.secondaryButtonColor = ButtonConstants.secondaryButtonColor,
       this.primeButtonText = ButtonConstants.primeButtonText,
       this.primeButtonTextStyle = ButtonConstants.primeButtonTextStyle,
-      this.loaderWidget})
+      this.loaderWidget,
+      this.primeButtonIcon,
+      this.secondaryButtonIcon,
+      this.buttonShape,
+      this.primeButtonGradient,
+      this.secondaryButtonGradient})
       : super(key: key);
 
   @override
@@ -129,19 +149,94 @@ class _SubmitButtonsGroup extends State<SubmitButtonsGroup> {
       SizedBox(width: _isButtonGroupAvailable ? 10 : 0);
 
   Widget _buildPrimaryButton() {
+    Widget child = Text(widget.primeButtonText ?? '');
+    if (widget.primeButtonIcon != null) {
+      child = Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          widget.primeButtonIcon!,
+          const SizedBox(width: 8),
+          child,
+        ],
+      );
+    }
+
+    if (widget.primeButtonGradient != null) {
+      child = Ink(
+        decoration: BoxDecoration(
+          gradient: widget.primeButtonGradient,
+          borderRadius: widget.buttonShape is RoundedRectangleBorder
+              ? (widget.buttonShape as RoundedRectangleBorder).borderRadius
+              : BorderRadius.circular(4), // Default border radius
+        ),
+        child: Container(
+          alignment: Alignment.center,
+          constraints: widget.isExpand ? const BoxConstraints(minHeight: 40, minWidth: double.maxFinite) : BoxConstraints(minHeight: _getButtonSize()?.height ?? 40, minWidth: _getButtonSize()?.width ?? 0),
+          child: child,
+        ),
+      );
+    }
+
+    if (widget.primeButtonIcon != null && widget.primeButtonGradient == null) {
+      return ElevatedButton.icon(
+        style: _primaryButtonStyle(),
+        onPressed: widget.onSubmit,
+        icon: widget.primeButtonIcon!,
+        label: Text(widget.primeButtonText ?? ''),
+      );
+    }
+
     return ElevatedButton(
       style: _primaryButtonStyle(),
       onPressed: widget.onSubmit,
-      child: Text(widget.primeButtonText ?? ''),
+      child: child,
     );
   }
 
   Widget _buildSecondaryButton() {
     VoidCallback? _onCancel = widget.onCancel ?? () => Navigator.pop(context);
+    Widget child = Text(widget.secondaryButtonText ?? '');
+
+    if (widget.secondaryButtonIcon != null) {
+      child = Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          widget.secondaryButtonIcon!,
+          const SizedBox(width: 8),
+          child,
+        ],
+      );
+    }
+
+    if (widget.secondaryButtonGradient != null) {
+      child = Ink(
+        decoration: BoxDecoration(
+          gradient: widget.secondaryButtonGradient,
+          borderRadius: widget.buttonShape is RoundedRectangleBorder
+              ? (widget.buttonShape as RoundedRectangleBorder).borderRadius
+              : BorderRadius.circular(4), // Default border radius
+        ),
+        child: Container(
+          alignment: Alignment.center,
+          constraints: widget.isExpand ? const BoxConstraints(minHeight: 40, minWidth: double.maxFinite) : BoxConstraints(minHeight: _getButtonSize()?.height ?? 40, minWidth: _getButtonSize()?.width ?? 0),
+          child: child,
+        ),
+      );
+    }
+
+    if (widget.secondaryButtonIcon != null && widget.secondaryButtonGradient == null) {
+      return ElevatedButton.icon(
+        style: _secondaryButtonStyle(),
+        onPressed: _onCancel,
+        icon: widget.secondaryButtonIcon!,
+        label: Text(widget.secondaryButtonText ?? ''),
+      );
+    }
+
     return ElevatedButton(
       style: _secondaryButtonStyle(),
       onPressed: _onCancel,
-      child: Text(widget.secondaryButtonText ?? ''),
+      child: child,
     );
   }
 
@@ -150,8 +245,15 @@ class _SubmitButtonsGroup extends State<SubmitButtonsGroup> {
       foregroundColor: widget.secondaryButtonTextStyle!.color,
       minimumSize: _getButtonSize(),
       elevation: widget.groupElevation,
-      backgroundColor: widget.secondaryButtonColor,
+      backgroundColor: widget.secondaryButtonGradient != null
+          ? Colors.transparent
+          : widget.secondaryButtonColor,
+      surfaceTintColor:
+          widget.secondaryButtonGradient != null ? Colors.transparent : null,
+      shadowColor:
+          widget.secondaryButtonGradient != null ? Colors.transparent : null,
       textStyle: widget.secondaryButtonTextStyle,
+      shape: widget.buttonShape,
     );
   }
 
@@ -160,8 +262,14 @@ class _SubmitButtonsGroup extends State<SubmitButtonsGroup> {
       foregroundColor: widget.primeButtonTextStyle!.color,
       minimumSize: _getButtonSize(),
       elevation: widget.groupElevation,
-      backgroundColor: widget.primeButtonColor,
+      backgroundColor: widget.primeButtonGradient != null
+          ? Colors.transparent
+          : widget.primeButtonColor,
+      surfaceTintColor:
+          widget.primeButtonGradient != null ? Colors.transparent : null,
+      shadowColor: widget.primeButtonGradient != null ? Colors.transparent : null,
       textStyle: widget.primeButtonTextStyle,
+      shape: widget.buttonShape,
     );
   }
 

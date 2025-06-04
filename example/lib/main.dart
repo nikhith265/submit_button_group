@@ -79,8 +79,16 @@ class _MyHomePageState extends State<MyHomePage> {
             loading: _loading,
             primeButtonText: 'Increment',
             secondaryButtonText: 'Decrement',
+            primeButtonIcon: const Icon(Icons.add),
+            secondaryButtonIcon: const Icon(Icons.remove),
+            buttonShape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
+            primeButtonGradient: const LinearGradient(
+                colors: [Colors.lightGreenAccent, Colors.green],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight),
             secondaryButtonColor: Colors.red,
-            primeButtonColor: Colors.green,
+            primeButtonColor: Colors.green, // This will be overridden by gradient, but good to keep for clarity or if gradient is removed
             secondaryButtonTextStyle: const TextStyle(color: Colors.white),
             onCancel: _counter > 0
                 ? () async {
