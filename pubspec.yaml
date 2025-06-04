@@ -1,11 +1,11 @@
 name: submit_button_group
-description: A Flutter package to provide button with inbuilt loading and endless customizability. 
-version: 0.0.3
+description: A Flutter package to provide button with inbuilt loading and endless customizability.
+version: 1.0.0
 homepage: https://github.com/nikhith265/submit_button_group
 
 environment:
-  sdk: ">=2.16.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=2.16.0 <4.0.0"
+  flutter: ">=3.31.1"
 
 dependencies:
   flutter:

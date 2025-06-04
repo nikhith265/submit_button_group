@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:submit_button_group/submit_button_group.dart';
 
 class SubmitButtonsGroup extends StatefulWidget with ButtonConstants {
- ///Create a custom [Widget] to display a group of two buttons with an in-build loading action. 
- ///In default Widget shows two buttons, the primary button and the secondary button. 
- /// The primary button shows the nature of a submit button and the secondary button shows the nature of a close button.
- ///  Both are customizable and perform as needed.
+  ///Create a custom [Widget] to display a group of two buttons with an in-build loading action.
+  ///In default Widget shows two buttons, the primary button and the secondary button.
+  /// The primary button shows the nature of a submit button and the secondary button shows the nature of a close button.
+  ///  Both are customizable and perform as needed.
 
   ///[loading] accepts a [ValueNotifier] with value [bool], which determines
   /// wether to display a [loaderWidget] or buttons.
@@ -36,19 +36,19 @@ class SubmitButtonsGroup extends StatefulWidget with ButtonConstants {
   ///On null default color [ButtonConstants.secondaryButtonColor] will be used.
   final Color? primeButtonColor;
 
-   ///[primeButtonText] add a text to the primary button.
+  ///[primeButtonText] add a text to the primary button.
   ///On null default text [ButtonConstants.primeButtonText] will be used.
   final String? primeButtonText;
 
-   ///[primeButtonTextStyle] add a text style to the primary button text.
+  ///[primeButtonTextStyle] add a text style to the primary button text.
   ///On null default text [ButtonConstants.primeButtonTextStyle] will be used.
   final TextStyle? primeButtonTextStyle;
 
-   ///[groupElevation] add a elevation to the buttons.
+  ///[groupElevation] add a elevation to the buttons.
   ///On null default elevation [ButtonConstants.groupElevation] will be used.
   final double? groupElevation;
 
-   ///[crossAxisWidth] sets the width between two buttons.
+  ///[crossAxisWidth] sets the width between two buttons.
   ///On null default width [ButtonConstants.crossAxisWidth] will be used.
   final double? crossAxisWidth;
 
@@ -147,20 +147,20 @@ class _SubmitButtonsGroup extends State<SubmitButtonsGroup> {
 
   ButtonStyle _secondaryButtonStyle() {
     return ElevatedButton.styleFrom(
-      onPrimary: widget.secondaryButtonTextStyle!.color,
+      foregroundColor: widget.secondaryButtonTextStyle!.color,
       minimumSize: _getButtonSize(),
       elevation: widget.groupElevation,
-      primary: widget.secondaryButtonColor,
+      backgroundColor: widget.secondaryButtonColor,
       textStyle: widget.secondaryButtonTextStyle,
     );
   }
 
   ButtonStyle _primaryButtonStyle() {
     return ElevatedButton.styleFrom(
-      onPrimary: widget.primeButtonTextStyle!.color,
+      foregroundColor: widget.primeButtonTextStyle!.color,
       minimumSize: _getButtonSize(),
       elevation: widget.groupElevation,
-      primary: widget.primeButtonColor,
+      backgroundColor: widget.primeButtonColor,
       textStyle: widget.primeButtonTextStyle,
     );
   }
